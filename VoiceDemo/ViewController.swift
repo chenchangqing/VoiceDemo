@@ -21,6 +21,8 @@ class ViewController: UIViewController, BDRecognizerViewDelegate {
         
         recognizerVC.delegate = self
         recognizerVC.enableFullScreenMode = true
+        
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +32,7 @@ class ViewController: UIViewController, BDRecognizerViewDelegate {
 
     // MARK: - Action
     
-    @IBAction private func say(sender: UIButton) {
+    @IBAction private func say(sender: UIButton?) {
         
         let paramsObj = BDRecognizerViewParamsObject()
 
@@ -63,6 +65,70 @@ class ViewController: UIViewController, BDRecognizerViewDelegate {
             }
         }
     }
+    
+    // MARK: - 
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
 
+    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+        
+        guard let event = event else {
+            
+            return
+        }
+        
+        if event.type == UIEventType.RemoteControl {
+            
+            switch event.subtype {
+            case .None:
+                break
+                
+            case .MotionShake:
+                break
+                
+            case .RemoteControlPlay:
+                print("play")
+                break
+                
+            case .RemoteControlPause:
+                print("pause")
+                break
+                
+            case .RemoteControlStop:
+                print("stop")
+                break
+                
+            case .RemoteControlTogglePlayPause:
+                print("单击暂停")
+                
+                self.say(nil)
+                break
+                
+            case .RemoteControlNextTrack:
+                print("双击暂停")
+                recognizerVC.cancel()
+                break
+                
+            case .RemoteControlPreviousTrack:
+                print("三击暂停")
+                break
+                
+            case .RemoteControlBeginSeekingBackward:
+                break
+                
+            case .RemoteControlEndSeekingBackward:
+                break
+                
+            case .RemoteControlBeginSeekingForward:
+                break
+                
+            case .RemoteControlEndSeekingForward:
+                break
+                    
+            }
+        }
+    }
 }
 
