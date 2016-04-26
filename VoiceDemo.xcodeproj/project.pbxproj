@@ -343,6 +343,7 @@
 				TargetAttributes = {
 					E646D6051CCE552000775AF4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8ZZS76SEL5;
 					};
 					E646D6191CCE552000775AF4 = {
 						CreatedOnToolsVersion = 7.3;
@@ -555,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -650,6 +653,7 @@
 				E646D6301CCE552000775AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E646D6311CCE552000775AF4 /* Build configuration list for PBXNativeTarget "VoiceDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +662,7 @@
 				E646D6331CCE552000775AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E646D6341CCE552000775AF4 /* Build configuration list for PBXNativeTarget "VoiceDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +671,7 @@
 				E646D6361CCE552000775AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
